@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "src/btc_loan_dapp_backend/loan_canister",
+    "src/btc_loan_dapp_backend/mock_ckbtc",
+    "src/btc_loan_dapp_backend/mock_iusd",
+    "src/btc_loan_dapp_backend/oracle_canister"
+]
+resolver = "2"

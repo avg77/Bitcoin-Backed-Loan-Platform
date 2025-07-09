@@ -1,0 +1,21 @@
+type User = principal;
+
+type LoanData = record {
+  deposited_btc: nat64;
+  borrowed_iusd: nat64;
+};
+
+type LoanEvent = record {
+  user: principal;
+  action: text;
+  amount: nat64;
+  timestamp: nat64;
+};
+
+service : {
+  "deposit_btc" : (nat64) -> ();
+  "borrow_iusd" : (nat64) -> ();
+  "repay_iusd" : (nat64) -> ();
+  "get_loan" : () -> (opt LoanData) query;
+  "get_loan_history" : () -> (vec LoanEvent) query;
+}

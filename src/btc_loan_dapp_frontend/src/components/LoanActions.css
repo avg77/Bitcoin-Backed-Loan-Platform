@@ -1,0 +1,135 @@
+.loan-actions-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(70, 40, 120, 0.5);
+  color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.loan-actions-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #a27aff;
+  text-align: center;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Balance Cards */
+.balance-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.balance-card {
+  flex: 1;
+  min-width: 220px;
+  padding: 1rem;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(162, 122, 255, 0.1);
+}
+
+.balance-card .label {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.balance-card .value {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f0c674;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.form-group input {
+  padding: 12px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.loan-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.loan-btns button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.loan-btns button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #a27aff88;
+}
+
+.status-message {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: #f08a5d;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .loan-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .loan-btns button {
+    width: 100%;
+  }
+
+  .loan-actions-container h2 {
+    font-size: 1.6rem;
+  }
+}
