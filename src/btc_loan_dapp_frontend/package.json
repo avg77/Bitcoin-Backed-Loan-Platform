@@ -28,7 +28,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\"",
-    "prebuild": "dfx generate",
+    "prebuild": "if [ \"$VERCEL\" != \"1\" ]; then dfx generate; fi",
     "setup": "npm i && dfx canister create btc_loan_dapp_backend && dfx generate btc_loan_dapp_backend && dfx deploy",
     "start": "vite --port 3000",
     "test": "vitest run"
